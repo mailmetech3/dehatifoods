@@ -1,0 +1,127 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* ===== Top Bar ===== */
+.topbar {
+  background: linear-gradient(90deg, #ADEBB3, #007a00);
+  color: #fff;
+  padding: 8px 80px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar .left-info { display: flex; gap: 25px; align-items: center; }
+.topbar i { color: #ffcc00; margin-right: 6px; }
+.topbar .top-link { color: #fff; text-decoration: none; font-weight: 500; }
+.topbar .top-link:hover { color: #ffcc00; }
+.social-icons a { margin-left: 15px; color: #fff; font-size: 16px; transition: 0.3s; }
+.social-icons a:hover { color: #ffcc00; }
+
+/* ===== Navbar ===== */
+.navbar {
+  background: linear-gradient(90deg, #ffffff, #007a00);
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.brand-title { font-size: 1.8rem; font-weight: bold; color: #004d00; }
+.brand-title span { color: #FFA500; }
+.tagline { font-size: 0.9rem; font-style: italic; color: #004d00; }
+
+/* Nav links */
+.custom-link { position: relative; transition: color 0.3s ease; }
+.custom-link::after {
+  content: ""; position: absolute; left: 0; bottom: -5px;
+  width: 0%; height: 2px; background-color: #ffcc00;
+  transition: width 0.3s ease;
+}
+.custom-link:hover { color: #ffcc00 !important; }
+.custom-link:hover::after { width: 100%; }
+
+/* ===== Hero Carousel ===== */
+.carousel-item {
+  height: 85vh; min-height: 500px;
+  background-position: center; background-size: cover;
+  position: relative;
+}
+.carousel-item::before {
+  content: ""; position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; background: rgba(0,0,0,0.55);
+}
+.carousel-caption { bottom: 10%; z-index: 1; }
+.carousel-caption h2, .carousel-caption h1 { font-size: 50px; font-weight: 700; }
+.carousel-caption p { font-size: 18px; margin-top: 15px; }
+
+/* Taglines */
+.tagline-hero {
+  font-size: 52px; font-weight: 800;
+  background: linear-gradient(90deg, #ffcc00, #ffffff, #25D366);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  letter-spacing: 2px; margin-bottom: 10px;
+}
+.tagline-sub {
+  font-size: 28px; font-weight: 700;
+  color: #ffcc00; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade { opacity: 0; animation: fadeUp 1.2s ease forwards; }
+.delay-1 { animation-delay: 0.6s; }
+.delay-2 { animation-delay: 1.2s; }
+
+/* ===== WhatsApp Button ===== */
+.whatsapp-btn {
+  position: fixed; bottom: 20px; right: 20px;
+  background: #25D366; color: white; border-radius: 50%;
+  padding: 15px 18px; font-size: 28px; z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s;
+}
+.whatsapp-btn:hover { background: #1ebe5d; transform: scale(1.1); }
+
+/* ===== Footer ===== */
+.footer {
+  background: linear-gradient(90deg, #ffffff, #007a00);
+  color: #fff; padding: 30px 15px; margin-top: 40px;
+  text-align: center;
+}
+.footer .footer-brand {
+  display: flex; align-items: center; justify-content: center;
+  gap: 15px; margin-bottom: 15px;
+}
+.footer .footer-brand img { height: 70px; }
+.footer .brand-title { font-size: 1.5rem; font-weight: bold; }
+.footer .brand-title span { color: #FFA500; }
+.footer .tagline { font-size: 0.85rem; font-style: italic; color: ##004d00; }
+.footer .copyright { font-size: 0.85rem; color: #ddd; }
+
+/* ===== Responsive Fixes ===== */
+@media (max-width: 768px) {
+  .topbar { padding: 8px 15px; flex-direction: column; gap: 5px; text-align: center; }
+  .topbar .left-info { flex-direction: column; gap: 8px; }
+  .brand img { height: 60px; }
+  .brand-title { font-size: 1.2rem; }
+  .tagline { font-size: 0.7rem; }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 25px; margin-top: 10px; }
+  .nav-links a { font-size: 0.9rem; }
+  .carousel-item { height: 60vh; min-height: 300px; }
+  .carousel-caption { bottom: 18%; }
+  .carousel-caption h1, .carousel-caption h2 { font-size: 26px; }
+  .carousel-caption p { font-size: 14px; }
+  .tagline-hero { font-size: 28px; }
+  .tagline-sub { font-size: 16px; }
+  .footer .footer-brand { flex-direction: column; }
+  .footer .footer-brand img { height: 50px; }
+}
+
+@media (max-width: 480px) {
+  .carousel-caption { bottom: 22%; padding: 6px; }
+  .tagline-hero { font-size: 1.2rem; line-height: 1.3; }
+}

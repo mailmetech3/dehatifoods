@@ -1,0 +1,316 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* ==================== TOPBAR ==================== */
+.topbar {
+  background: linear-gradient(90deg, #ADEBB3, #007a00);
+  color: #fff;
+  padding: 8px 80px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar .left-info {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.topbar i {
+  color: #ffcc00;
+  margin-right: 6px;
+}
+.topbar .top-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.topbar .top-link:hover {
+  color: #ffcc00;
+}
+.social-icons a {
+  margin-left: 15px;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: #ffcc00;
+}
+
+/* ==================== NAVBAR ==================== */
+.custom-navbar {
+  background: linear-gradient(270deg, #ff7518, #ffb347, #ff7518);
+  background-size: 600% 600%;
+  animation: orangeFlow 12s ease infinite;
+  box-shadow: 0 3px 8px rgba(0, 200, 0, 0.5);
+}
+@keyframes orangeFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.custom-navbar .navbar-brand img {
+  height: 60px;
+}
+.custom-navbar .brand-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+}
+.custom-navbar .brand-title span {
+  color: #007a00;
+}
+.custom-navbar .tagline {
+  font-size: 0.7rem;
+  color: #444;
+  font-style: italic;
+}
+
+.custom-navbar .nav-link {
+  font-weight: 600;
+  color: #fff !important;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background-color: #28a745;
+  transition: width 0.3s ease;
+}
+.custom-navbar .nav-link:hover {
+  color: #28a745 !important;
+  transform: translateY(-2px);
+}
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+  background-color: #28a745;
+}
+.custom-navbar .nav-link.active {
+  color: #28a745 !important;
+}
+.custom-navbar .nav-link.active::after {
+  width: 100%;
+  background-color: #28a745;
+}
+.navbar-toggler {
+  border-color: #fff;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ==================== CAROUSEL ==================== */
+.carousel-item {
+  height: 85vh;
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+filter: brightness(100%);
+}
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  
+}
+.carousel-caption {
+  bottom: 30%;
+  z-index: 1;
+}
+.carousel-caption h2, .carousel-caption h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.carousel-caption p {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+/* Tagline Styling */
+.tagline-hero {
+  font-size: 52px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffcc00, #ffffff, #25D366);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.tagline-sub {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffcc00;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade {
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+}
+.delay-1 { animation-delay: 0.6s; }
+.delay-2 { animation-delay: 1.2s; }
+
+/* ==================== CAREER BADGE ==================== */
+.new-badge {
+  background: green;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  margin-left: 5px;
+  border-radius: 4px;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ==================== CAPTION & BUTTON ==================== */
+.custom-caption {
+  bottom: 20%;
+}
+.order-btn {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+/* ==================== WHATSAPP FLOATING BUTTON ==================== */
+.whatsapp-btn {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #25d366;
+  color: white;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
+}
+.whatsapp-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  color: white;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: linear-gradient(270deg, #ff7518, #ffb347, #ff7518);
+  padding: 8px 15px;   /* ↑ padding badha diya */
+  margin-top: 60px;     /* ✅ footer thoda neeche push hoga */
+  max-width: 1500px;   /* ✅ footer ki width limited */
+  border-radius: 10px; /* optional: rounded look */
+}
+
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-logo {
+  height: 50px;
+}
+.brand-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.brand-title span {
+  color: #007a00;
+}
+.tagline {
+  font-size: 14px;
+  color: #444;
+  font-style: italic;
+}
+.copyright {
+  margin: 0 auto;
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  flex: 1;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 8px 15px;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+  .topbar .left-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .carousel-item {
+    height: 60vh;
+    min-height: 300px;
+  }
+  .carousel-caption h1, .carousel-caption h2 {
+    font-size: 26px;
+  }
+  .carousel-caption p {
+    font-size: 14px;
+  }
+  .tagline-hero {
+    font-size: 28px;
+  }
+  .tagline-sub {
+    font-size: 16px;
+  }
+  .footer .footer-brand {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .footer-brand img {
+    height: 50px;
+  }
+}
+
+/* Mobile Specific (max-width: 576px) */
+@media (max-width: 576px) {
+  .custom-caption {
+    bottom: 10%;
+  }
+  .custom-caption h2 {
+    font-size: 1.3rem;
+  }
+  .custom-caption h3 {
+    font-size: 1rem;
+  }
+  .custom-caption p {
+    font-size: 0.9rem;
+  }
+  .order-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+}

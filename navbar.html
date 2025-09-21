@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DehatiSabji Nav Bar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar container */
+    .navbar {
+      background-color: #2e7d32; /* natural green */
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Brand section (left aligned) */
+    .brand {
+      text-align: left;
+    }
+
+    .brand-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .brand-title span {
+      color: #a5d6a7; /* lighter green accent */
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      font-style: italic;
+      font-family: "Cursive", sans-serif;
+      color: #e0f2f1;
+    }
+
+    /* Navigation menu (center aligned using absolute positioning) */
+    .nav-links {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 80px; /* extra spacing between tabs */
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover underline animation */
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 3px; /* thicker underline */
+      background-color: #a5d6a7;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a5d6a7;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <!-- Left-aligned brand -->
+    <div class="brand">
+      <div class="brand-title">Dehati<span>Sabji</span></div>
+      <div class="tagline">खेत से आपके घर तक</div>
+    </div>
+
+    <!-- Center-aligned navigation -->
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+</body>
+</html>

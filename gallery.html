@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Gallery - Dehati Foods</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- ✅ SAME CSS AS INDEX -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    /* Shrink navbar */
+    .custom-navbar {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .navbar-brand img {
+      height: 40px; /* smaller logo */
+    }
+    /* Gallery */
+    #gallery {
+      padding: 20px 0;
+    }
+    .carousel-inner img {
+      height: 600px;
+      width: 100%;
+      object-fit: cover;
+filter: brightness(100%);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="./img/logo.png" alt="Dehati Agro Foods Logo">
+      <div class="ms-2">
+        <div class="brand-title">Dehati<span>Foods</span></div>
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-4">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+   
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="career.html">
+            Career <span class="new-badge">New</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== GALLERY ==================== -->
+<!-- ==================== GALLERY ==================== -->
+<section id="gallery">
+  <div class="container">
+
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+      
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./gallery/team1.jpg" class="d-block w-100" alt="Team 1">
+          <div class="carousel-caption custom-caption d-none d-md-block">
+            <h5 class="orange-text">Our Team with Honourable Dignitaries</h5>
+            <p class="orange-sub">Memorable moments of Dehati Foods team meeting respected leaders and dignitaries.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./gallery/team2.jpg" class="d-block w-100" alt="Team 2">
+          <div class="carousel-caption custom-caption d-none d-md-block">
+            <h5 class="orange-text">Our Team with Honourable Dignitaries</h5>
+            <p class="orange-sub">Celebrating valuable interactions and guidance from respected personalities.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./gallery/team3.jpg" class="d-block w-100" alt="Team 3">
+          <div class="carousel-caption custom-caption d-none d-md-block">
+            <h5 class="orange-text">Our Team with Honourable Dignitaries</h5>
+            <p class="orange-sub">Strengthening relationships with industry leaders and mentors.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./gallery/team4.jpg" class="d-block w-100" alt="Team 4">
+          <div class="carousel-caption custom-caption d-none d-md-block">
+            <h5 class="orange-text">Our Team with Honourable Dignitaries</h5>
+            <p class="orange-sub">Building connections for a better future of Dehati Foods.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./gallery/team5.jpg" class="d-block w-100" alt="Team 5">
+          <div class="carousel-caption custom-caption d-none d-md-block">
+            <h5 class="orange-text">Our Team with Honourable Dignitaries</h5>
+            <p class="orange-sub">A journey of recognition, respect, and collaboration.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./gallery/team6.jpg" class="d-block w-100" alt="Team 6">
+          <div class="carousel-caption custom-caption d-none d-md-block">
+            <h5 class="orange-text">Our Team with Honourable Dignitaries</h5>
+            <p class="orange-sub">Inspired by the wisdom and support of esteemed dignitaries.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS for captions -->
+<style>
+  .custom-caption {
+    bottom: 40px; /* ✅ caption ko bottom se upar le aaya */
+  }
+  .orange-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ff9800;  /* Bold Orange */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  }
+  .orange-sub {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff9800;  /* Orange */
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  }
+</style>
+
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <img src="./img/logo.png" alt="Dehati Foods Logo" class="footer-logo">
+      <div>
+        <div class="brand-title">Dehati<span>Foods</span></div>
+        <div class="tagline">
+          <i class="fas fa-leaf" style="color:#28a745;"></i> 
+          खेत से सीधे, आपके घर तक!! 
+          <i class="fas fa-apple-alt" style="color:#e63946;"></i>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">
+      © Dehati Agro Foods Private Limited 2025. All rights Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
